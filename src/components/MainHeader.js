@@ -27,7 +27,7 @@ function MainHeader() {
     return <header className={classes.header}>
         <div className={classes.row}>
             <h1 className={classes.firstTitle}>{headerTitle}</h1>
-            {showButton && <button className={classes.newButton} onClick={function GoToHomePage() {
+            {showButton && <button className={classes.newButton} onClick={function GoToCreateEventPage() {
                 window.location = '/newform';
             }} type='button'>+New</button>}
         </div>

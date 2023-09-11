@@ -46,8 +46,12 @@
         width: 100%;
         border: none;
         height: auto;
-        padding: 1rem 0;
         margin-top: 0;
+    }
+
+    .list li {
+        border-right: 1px solid #000;
+        border-left: 1px solid #000;
     }
 
 }

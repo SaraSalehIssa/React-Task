@@ -41,7 +41,6 @@ export default function NewForm() {
             imagePlace: imgPlace,
         })
             .then(() => {
-                alert('Data was added successfully!');
                 setName('');
                 setDescription('');
                 setsDate('');
@@ -52,25 +51,6 @@ export default function NewForm() {
                 alert('There was an error: ' + error);
             });
     };
-
-    let SelectData = () => {
-        const dbref = ref(database);
-
-        get(child(dbref), `places/${name}`).then(snapshot => {
-            if (snapshot.exists()) {
-                setName(snapshot.val().name);
-                setDescription(snapshot.val().description);
-                setsDate(snapshot.val().startDate);
-                seteDate(snapshot.val().endDate);
-                setImgPlace(snapshot.val().imagePlace);
-            } else {
-                alert('no data available');
-            }
-        }).catch((error) => {
-            console.log(error);
-            alert('There was an error: ' + error)
-        })
-    }
 
     return (
         <form className={classes.form}>
