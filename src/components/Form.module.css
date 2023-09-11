@@ -1,0 +1,118 @@
+.form {
+    width: 90%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.form_control {
+    width: 50%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_control input,
+.form_control textarea,
+.form_control label {
+    display: inline;
+    padding: 1rem;
+}
+
+.form_control label {
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.form_control input,
+.form_control textarea {
+    font: inherit;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+}
+
+.form_control input:focus,
+.form_control textarea:focus {
+    outline: none;
+    border-color: #000;
+    background-color: #c9dfff;
+}
+
+.group_actions {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+.form_btns {
+    text-align: right;
+    border-top: 1px solid #000;
+    padding: 1rem;
+    height: auto;
+}
+
+.cancel {
+    cursor: pointer;
+    border: 0 none transparent;
+    background-color: transparent;
+    height: 35px;
+    width: 100px;
+    color: #000;
+    font-size: 15px;
+}
+
+.save,
+.remove,
+.add {
+    cursor: pointer;
+    border: 0 none transparent;
+    background-color: #3b8cfd;
+    height: 35px;
+    width: 150px;
+    color: #000;
+    font-size: 15px;
+    margin: 0 1rem;
+}
+
+.save:hover,
+.remove:hover,
+.add:hover {
+    background-color: #82b1f3;
+}
+
+
+/* Responsive layout */
+@media screen and (max-width: 800px) {
+
+    .form {
+        width: 100%;
+        border: 1px solid #000;
+        border-top: none;
+        margin-top: 0;
+    }
+
+    .form_control {
+        width: 90%;
+        padding: 1rem 0.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form_control input,
+    .form_control textarea{
+        width: 12rem;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .cancel,
+    .save {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
