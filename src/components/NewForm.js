@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import StartFirebase from "../components/firebaseConfig/index";
-import { ref, set, get, update, remove, child, push } from "firebase/database";
+import { ref, set, push } from "firebase/database";
 import classes from './Form.module.css';
 
 const database = StartFirebase();
@@ -17,9 +17,7 @@ export default function NewForm() {
         return (value == null || value.replaceAll(' ', '').length < 1);
     }
 
-    let insertData = (e) => {
-        e.preventDefault();
-
+    let insertData = () => {
         if (
             isNullOrWhiteSpace(description) ||
             isNullOrWhiteSpace(sDate) ||
