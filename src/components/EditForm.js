@@ -39,29 +39,6 @@ export default function EditForm() {
     let pathname = location.pathname;
     pathname = pathname.substring(1);
     const placeRef = ref(database, `places/${pathname}`);
-    //console.log(pathname);
-
-    // useEffect(() => {
-    //     Dummy_Events.map(event => {
-    //         if (event.key === pathname) {
-    //             setName(event.name);
-    //             setsDate(event.startDate);
-    //             seteDate(event.endDate);
-    //             setDescription(event.description);
-    //             setImgPlace(event.imagePlace);
-    //         }
-    //         return <></>;
-    //     })
-    // });
-
-
-    // useEffect(() => {
-    //     setName(name);
-    //     setsDate(sDate);
-    //     seteDate(eDate);
-    //     setDescription(description);
-    //     setImgPlace(imgPlace);
-    // }, [name, sDate, eDate, description, imgPlace]);
 
     useEffect(() => {
         onValue(placeRef, (snapshot) => {

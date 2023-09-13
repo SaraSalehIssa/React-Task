@@ -1,0 +1,26 @@
+.loadinImg {
+    width: 89%;
+    border: 1px solid #000;
+    border-top: none;
+    margin-top: 0;
+}
+
+.spinner {
+    width: 10%;
+    height: auto;
+    padding: 13rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: main 3s;
+}
+
+@keyframes main {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
