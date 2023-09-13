@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import StartFirebase from "../components/firebaseConfig/index";
 import { ref, set, push } from "firebase/database";
 import classes from './Form.module.css';
+import { NavLink } from 'react-router-dom';
 
 const database = StartFirebase();
 
@@ -100,7 +101,11 @@ export default function NewForm() {
                         onChange={e => { setImgPlace(e.target.value) }} />
                 </div>
                 <div className={classes.form_btns}>
-                    <input className={classes.cancel} type="submit" value='Cancel' />
+                    <button className={classes.cancel}><a
+                        href='/list'
+                        className={classes.cancelAnchor} >
+                        Cancel
+                    </a></button>
                     <button id='addBtn' className={classes.add} onClick={insertData}>Add</button>
                 </div>
             </div>

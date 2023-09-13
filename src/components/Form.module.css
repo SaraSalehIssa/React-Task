@@ -54,13 +54,16 @@
 }
 
 .cancel {
-    cursor: pointer;
-    border: 0 none transparent;
+    border: 0 none transparent !important;
     background-color: transparent;
     height: 35px;
     width: 100px;
-    color: #000;
     font-size: 15px;
+}
+
+.cancelAnchor {
+    text-decoration: none;
+    color: #000;
 }
 
 .save,
