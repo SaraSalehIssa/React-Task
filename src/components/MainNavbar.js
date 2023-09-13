@@ -8,7 +8,7 @@ function MainNavbar() {
             <ul className={classes.list}>
                 <li>
                     <NavLink
-                        to='/'
+                        to='/list'
                         className={({ isActive }) => isActive ? classes.active : undefined} end >
                         List
                     </NavLink>
