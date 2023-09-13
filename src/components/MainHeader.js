@@ -10,7 +10,20 @@ function MainHeader() {
 
     switch (location.pathname) {
         case '/':
+            headerTitle = 'Create Account';
+            showButton = false;
+            break;
+        case '/login':
+            headerTitle = 'Welcome Back';
+            showButton = false;
+            break;
+        case '/forgot-password':
+            headerTitle = 'Reset Password';
+            showButton = false;
+            break;
+        case '/list':
             headerTitle = 'Events';
+            showButton = true;
             break;
         case '/newform':
             headerTitle = 'Create Event';

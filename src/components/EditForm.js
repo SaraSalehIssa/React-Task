@@ -37,7 +37,7 @@ export default function EditForm() {
 
     const location = useLocation();
     let pathname = location.pathname;
-    pathname = pathname.substring(1);
+    pathname = pathname.substring(6);
     const placeRef = ref(database, `places/${pathname}`);
 
     useEffect(() => {

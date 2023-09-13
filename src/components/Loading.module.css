@@ -1,7 +1,8 @@
 .loadinImg {
-    width: 89%;
+    width: 90% !important;
     border: 1px solid #000;
     border-top: none;
+    border-left: none;
     margin-top: 0;
 }
 

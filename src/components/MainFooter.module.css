@@ -1,0 +1,30 @@
+/* header section */
+.footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: #000;
+    text-align: start;
+    font-size: 30px;
+    color: white;
+    margin: 0px;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 1rem;
+}
+
+.logoutButton {
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 1rem;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}

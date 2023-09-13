@@ -1,12 +1,13 @@
 /* navbar section */
 .navbar {
     font-size: 25px;
-    width: 10%;
+    width: 10% !important;
     height: auto;
     border: 1px solid #000;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+    padding: 0 !important;
 }
 
 .list {
@@ -43,7 +44,7 @@
 @media screen and (max-width: 800px) {
 
     .navbar {
-        width: 100%;
+        width: 100% !important;
         border: none;
         height: auto;
         margin-top: 0;

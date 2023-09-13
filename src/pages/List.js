@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import MainNavbar from "../components/MainNavbar";
 import Loading from "../components/Loading";
 import PlaceData from "../components/PlaceData";
+import MainFooter from '../components/MainFooter';
 
 function ListPage() {
     const [isLoading, setIsLoading] = useState(true);
@@ -18,6 +19,7 @@ function ListPage() {
         <div className="row">
             <MainNavbar />
             {isLoading ? <Loading /> : <PlaceData />}
+            <MainFooter />
         </div>
     );
 }
