@@ -90,7 +90,7 @@
 @media screen and (max-width: 800px) {
 
     .form {
-        width: 100%;
+        width: 100% !important;
         border: 1px solid #000;
         border-top: none;
         margin-top: 0;
