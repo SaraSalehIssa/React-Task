@@ -1,5 +1,5 @@
-import MainNavbar from "../components/MainNavbar";
-import NewForm from "../components/NewForm";
+import MainNavbar from "../components/Navbar/MainNavbar";
+import NewForm from "../components/Form/NewForm";
 
 function NewFormPage() {
     return <div className="row">

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import StartFirebase from "../components/firebaseConfig/index";
+import StartFirebase from "../firebaseConfig/index";
 import { ref, set, push } from "firebase/database";
 import classes from './Form.module.css';
-import { NavLink } from 'react-router-dom';
 
 const database = StartFirebase();
 

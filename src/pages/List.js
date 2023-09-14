@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import MainNavbar from "../components/MainNavbar";
-import Loading from "../components/Loading";
-import PlaceData from "../components/PlaceData";
-import MainFooter from '../components/MainFooter';
+import MainNavbar from "../components/Navbar/MainNavbar";
+import Loading from "../components/Loading/Loading";
+import PlaceData from "../components/List/PlaceData";
+import MainFooter from '../components/Footer/MainFooter';
 
 function ListPage() {
     const [isLoading, setIsLoading] = useState(true);

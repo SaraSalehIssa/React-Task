@@ -1,5 +1,5 @@
 import React from 'react';
-import UpdateProfile from "../components/UpdateProfile";
+import UpdateProfile from "../components/Auth/UpdateProfile";
 
 function ForgotPasswordPage() {
     return <div className="row">

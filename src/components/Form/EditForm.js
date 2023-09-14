@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import StartFirebase from "../components/firebaseConfig/index";
+import StartFirebase from "../firebaseConfig/index";
 import { useLocation } from 'react-router-dom';
 import { ref, onValue, remove, update } from 'firebase/database';
 import classes from './Form.module.css';

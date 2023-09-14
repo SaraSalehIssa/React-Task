@@ -1,5 +1,5 @@
 import React from 'react';
-import StartFirebase from "../components/firebaseConfig/index";
+import StartFirebase from "../firebaseConfig/index";
 import { Link } from 'react-router-dom';
 import { ref, onValue } from "firebase/database";
 import classes from './PlaceData.module.css';

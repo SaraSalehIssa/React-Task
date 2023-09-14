@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom';
-import MainNavigation from '../components/MainHeader';
+import MainHeader from '../components/Header/MainHeader';
 
 function RootLayout() {
     return <>
-        <MainNavigation />
+        <MainHeader />
         <main>
             <Outlet />
         </main>
