@@ -5,35 +5,15 @@ import { ref, onValue, remove, update } from 'firebase/database';
 import classes from './Form.module.css';
 
 const database = StartFirebase();
-const placesRef = ref(database, 'places/');
-
-let Dummy_Events = [];
-
-onValue(placesRef, (snapshot) => {
-    const placesData = snapshot.val();
-    //console.log(placesData);
-
-    if (placesData) {
-        Object.keys(placesData).forEach((key) => {
-            const placeData = placesData[key];
-            placeData.key = key;
-            //console.log(placeData);
-            Dummy_Events.push(placeData);
-        });
-    } else {
-        console.log('No data found.');
-    }
-}, (errorObject) => {
-    console.log('The read failed: ' + errorObject.name);
-});
 
 export default function EditForm() {
-    let [name, setName] = useState('');
-    let [sDate, setsDate] = useState('');
-    let [eDate, seteDate] = useState('');
-    let [description, setDescription] = useState('');
-    let [imgPlace, setImgPlace] = useState('');
-    let [isChange, setIsChange] = useState(false);
+    const [name, setName] = useState('');
+    const [sDate, setsDate] = useState('');
+    const [eDate, seteDate] = useState('');
+    const [description, setDescription] = useState('');
+    const [imgPlace, setImgPlace] = useState('');
+    
+    const [isChange, setIsChange] = useState(false);
 
     const location = useLocation();
     let pathname = location.pathname;
@@ -61,8 +41,7 @@ export default function EditForm() {
         });
     }, [placeRef, isChange, name, sDate, eDate, description, imgPlace]);
 
-
-    let deleteData = () => {
+    const deleteData = () => {
         remove(placeRef)
             .then(() => {
                 setName('');
@@ -76,7 +55,7 @@ export default function EditForm() {
             });
     };
 
-    let updateData = () => {
+    const updateData = () => {
         update(placeRef, {
             name: name,
             description: description,
@@ -87,7 +66,7 @@ export default function EditForm() {
             console.log("Data updated");
         }).catch((e) => {
             console.log(e);
-        })
+        });
     };
 
     const handleNameChange = (e) => {
@@ -172,4 +151,3 @@ export default function EditForm() {
         </form>
     )
 }
-

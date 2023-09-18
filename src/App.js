@@ -3,7 +3,6 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import AuthProvider from './contexts/AuthContext';
-import { Container } from 'react-bootstrap';
 
 import RootLayout from './pages/Root';
 import ListPage from './pages/List';
@@ -21,71 +20,23 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      {
-        index: true, element: <AuthProvider>
-          <Container
-            className='d-flex align-items-center justify-content-center'
-            style={{ minHeight: '80vh' }}>
-            <div
-              className='w-100'
-              style={{ maxWidth: '400px' }}
-            >
-              <SignUpPage />
-            </div>
-          </Container>
-        </AuthProvider>
-      },
+      { index: true, element: <SignUpPage /> },
       { path: 'list', element: <ListPage /> },
       { path: 'newform', element: <NewFormPage /> },
       { path: 'list/:eventId', element: <EditFormPage /> },
-      {
-        path: 'login', element: <AuthProvider>
-          <Container
-            className='d-flex align-items-center justify-content-center'
-            style={{ minHeight: '80vh' }}>
-            <div
-              className='w-100'
-              style={{ maxWidth: '400px' }}
-            >
-              <LoginPage />
-            </div>
-          </Container>
-        </AuthProvider>
-      },
-      {
-        path: 'forgot-password', element: <AuthProvider>
-          <Container
-            className='d-flex align-items-center justify-content-center'
-            style={{ minHeight: '80vh' }}>
-            <div
-              className='w-100'
-              style={{ maxWidth: '400px' }}
-            >
-              <ForgotPasswordPage />
-            </div>
-          </Container>
-        </AuthProvider>
-      },
-      {
-        path: 'update-password', element: <AuthProvider>
-          <Container
-            className='d-flex align-items-center justify-content-center'
-            style={{ minHeight: '80vh' }}>
-            <div
-              className='w-100'
-              style={{ maxWidth: '400px' }}
-            >
-              <UpdateProfilePage />
-            </div>
-          </Container>
-        </AuthProvider>
-      }
+      { path: 'login', element: <LoginPage /> },
+      { path: 'forgot-password', element: <ForgotPasswordPage /> },
+      { path: 'update-password', element: <UpdateProfilePage /> }
     ],
   }
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  );
 }
 
 export default App;
