@@ -70,6 +70,27 @@
     font-size: 1.5rem;
 }
 
+
+.spinner {
+    width: 10%;
+    height: auto;
+    padding: 13rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: main 3s;
+}
+
+@keyframes main {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* Responsive layout */
 @media screen and (max-width: 800px) {
 
@@ -82,6 +103,17 @@
 
     .placeItems {
         grid-template-columns: auto;
+    }
+}
+
+/* Responsive layout */
+@media screen and (max-width: 800px) {
+
+    .loadinImg {
+        width: 100% !important;
+        border: 1px solid #000;
+        border-top: none;
+        margin-top: 0;
     }
 
 }

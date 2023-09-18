@@ -62,8 +62,6 @@ export default function EditForm() {
             startDate: sDate,
             endDate: eDate,
             imagePlace: imgPlace
-        }).then(() => {
-            console.log("Data updated");
         }).catch((e) => {
             console.log(e);
         });

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import StartFirebase from '../firebaseConfig/index';
 import { Link } from 'react-router-dom';
 import { ref, onValue } from 'firebase/database';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import classes from './PlaceData.module.css';
 
 const database = StartFirebase();
@@ -9,6 +11,7 @@ const placesRef = ref(database, 'places');
 
 export default function PlaceData() {
     const [events, setEvents] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         onValue(placesRef, (snapshot) => {
@@ -22,8 +25,7 @@ export default function PlaceData() {
                 });
 
                 setEvents(newEvents);
-            } else {
-                console.log('No data found.');
+                setIsLoading(false);
             }
         }, (errorObject) => {
             console.log('The read failed: ' + errorObject.name);
@@ -32,7 +34,7 @@ export default function PlaceData() {
 
     return (
         <div className={classes.container}>
-            <div className={classes.places_container}>
+            {(!isLoading && <div className={classes.places_container}>
                 <ul className={classes.placeItems}>
                     {
                         events.map((event) => (
@@ -52,7 +54,10 @@ export default function PlaceData() {
                         ))
                     }
                 </ul>
-            </div>
+            </div>) || (isLoading && <FontAwesomeIcon
+                className={classes.spinner}
+                icon={faSpinner}
+            />)}
         </div>
     );
 }
