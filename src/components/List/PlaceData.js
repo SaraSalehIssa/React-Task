@@ -62,4 +62,4 @@ function PlaceData() {
     );
 }
 
-export {PlaceData};
+export { PlaceData };
