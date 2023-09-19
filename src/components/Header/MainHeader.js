@@ -47,4 +47,4 @@ function MainHeader() {
     </header>
 }
 
-export default MainHeader;
+export {MainHeader};

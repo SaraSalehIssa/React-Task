@@ -1,5 +1,5 @@
-import MainNavbar from "../components/Navbar/MainNavbar";
-import NewForm from "../components/Form/NewForm";
+import { MainNavbar } from "../components/Navbar/MainNavbar";
+import { NewForm } from "../components/Form/NewForm";
 
 function NewFormPage() {
     return <div className="row">
@@ -8,4 +8,4 @@ function NewFormPage() {
     </div>
 }
 
-export default NewFormPage;
+export { NewFormPage };

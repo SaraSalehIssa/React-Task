@@ -11,4 +11,4 @@ function MainFooter() {
     </footer>
 }
 
-export default MainFooter;
+export {MainFooter};

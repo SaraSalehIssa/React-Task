@@ -9,7 +9,7 @@ import classes from './PlaceData.module.css';
 const database = StartFirebase();
 const placesRef = ref(database, 'places');
 
-export default function PlaceData() {
+function PlaceData() {
     const [events, setEvents] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -61,3 +61,5 @@ export default function PlaceData() {
         </div>
     );
 }
+
+export {PlaceData};

@@ -17,4 +17,4 @@ function ForgotPasswordPage() {
     </div>
 }
 
-export default ForgotPasswordPage;
+export { ForgotPasswordPage };

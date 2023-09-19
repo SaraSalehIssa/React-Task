@@ -5,7 +5,7 @@ import classes from './Form.module.css';
 
 const database = StartFirebase();
 
-export default function NewForm() {
+function NewForm() {
     let [name, setName] = useState('');
     let [sDate, setsDate] = useState('');
     let [eDate, seteDate] = useState('');
@@ -109,5 +109,6 @@ export default function NewForm() {
                 </div>
             </div>
         </form>
-    )
+    );
 }
+export {NewForm};

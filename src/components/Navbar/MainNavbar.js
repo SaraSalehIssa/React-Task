@@ -25,4 +25,4 @@ function MainNavbar() {
     </>
 }
 
-export default MainNavbar;
+export { MainNavbar };

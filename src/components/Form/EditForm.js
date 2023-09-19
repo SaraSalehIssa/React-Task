@@ -6,13 +6,13 @@ import classes from './Form.module.css';
 
 const database = StartFirebase();
 
-export default function EditForm() {
+function EditForm() {
     const [name, setName] = useState('');
     const [sDate, setsDate] = useState('');
     const [eDate, seteDate] = useState('');
     const [description, setDescription] = useState('');
     const [imgPlace, setImgPlace] = useState('');
-    
+
     const [isChange, setIsChange] = useState(false);
 
     const location = useLocation();
@@ -147,5 +147,6 @@ export default function EditForm() {
                 </div>
             </div>
         </form>
-    )
+    );
 }
+export { EditForm };

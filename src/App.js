@@ -4,15 +4,15 @@ import {
 } from 'react-router-dom';
 import AuthProvider from './contexts/AuthContext';
 
-import RootLayout from './pages/Root';
-import ListPage from './pages/List';
-import NewFormPage from './pages/NewForm';
-import EditFormPage from './pages/EditForm';
-import ErrorPage from './pages/Error';
-import SignUpPage from './pages/SignUp';
-import LoginPage from './pages/Login';
-import ForgotPasswordPage from './pages/ForgotPassword';
-import UpdateProfilePage from './pages/UpdateProfile';
+import { RootLayout } from './pages/Root';
+import { ListPage } from './pages/List';
+import { NewFormPage } from './pages/NewForm';
+import { EditFormPage } from './pages/EditForm';
+import { ErrorPage } from './pages/Error';
+import { SignUpPage } from './pages/SignUp';
+import { LoginPage } from './pages/Login';
+import { ForgotPasswordPage } from './pages/ForgotPassword';
+import { UpdateProfilePage } from './pages/UpdateProfile';
 
 const router = createBrowserRouter([
   {

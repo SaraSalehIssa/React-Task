@@ -1,5 +1,5 @@
-import MainNavbar from "../components/Navbar/MainNavbar";
-import EditForm from "../components/Form/EditForm";
+import { MainNavbar } from "../components/Navbar/MainNavbar";
+import { EditForm } from "../components/Form/EditForm";
 
 function EditFormPage() {
     return <div className="row">
@@ -8,4 +8,4 @@ function EditFormPage() {
     </div>
 }
 
-export default EditFormPage;
+export { EditFormPage };

@@ -2,7 +2,7 @@ import React from 'react';
 import UpdateProfile from "../components/Auth/UpdateProfile";
 import { Container } from 'react-bootstrap';
 
-function ForgotPasswordPage() {
+function UpdateProfilePage() {
     return <div className="row">
         <Container
             className='d-flex align-items-center justify-content-center'
@@ -17,4 +17,4 @@ function ForgotPasswordPage() {
     </div>
 }
 
-export default ForgotPasswordPage;
+export { UpdateProfilePage };
